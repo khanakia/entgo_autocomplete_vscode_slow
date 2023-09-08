@@ -1,0 +1,573 @@
+Main Info Memory Profiling Metrics RPC Trace Analysis
+Trace Information
+$/cancelRequest last: 26.875µs, longest: 51.666µs
+$/progress last: 56µs, longest: 56µs
+$/setTrace last: 310.125µs, longest: 310.125µs
+Server.diagnose last: 42.350958ms, longest: 221.223542ms
+Server.diagnoseChangedFiles last: 1.252458ms, longest: 99.116875ms
+Server.diagnosePkgs last: 18.89575ms, longest: 220.524709ms
+Server.diagnoseSnapshot last: 1.0445385s, longest: 1.232760125s
+Server.publishDiagnostics last: 65.166µs, longest: 6.28675ms
+cache.ModTidy last: 36.09125ms, longest: 69.480584ms
+cache.ParseGoSrc last: 18.666µs, longest: 26.405042ms
+cache.ParseMod last: 267.084µs, longest: 267.084µs
+cache.forEachPackage last: 7.167µs, longest: 51.926625ms
+cache.importsState.refreshProcessEnv last: 21.117375ms, longest: 31.100084ms
+cache.importsState.runProcessEnvFunc last: 112.542µs, longest: 18.486209ms
+cache.populateProcessEnvFromSnapshot last: 697.583µs, longest: 697.583µs
+cache.readFile last: 89.791µs, longest: 1.234458ms
+cache.resolveImportGraph last: 455.625µs, longest: 10.583083ms
+cache.snapshot.ModTidy last: 36.8445ms, longest: 70.235708ms
+cache.snapshot.PackageDiagnostics last: 1.934917ms, longest: 51.961917ms
+cache.snapshot.clone last: 84.375µs, longest: 19.177542ms
+cache.snapshot.load last: 15.653458ms, longest: 326.536208ms
+cache.typeCheck last: 181.042µs, longest: 36.855541ms
+cache.typeCheckBatch.checkPackage last: 202.708µs, longest: 36.878417ms
+cache.typeCheckBatch.checkPackageForImport last: 18.245083ms, longest: 18.245083ms
+cache.typeCheckBatch.importPackage last: 4.255083ms, longest: 16.853125ms
+client/registerCapability last: 4.609292ms, longest: 4.609292ms
+client/unregisterCapability last: 1.884917ms, longest: 1.884917ms
+completion.Completion last: 557.228041ms, longest: 722.137542ms
+gocommand.Runner.Run last: 34.710208ms, longest: 68.414667ms
+gocommand.Runner.RunRaw last: 34.671708ms, longest: 122.892959ms
+imports.FixImports last: 71.542µs, longest: 596.084µs
+imports.ModuleResolver.scan last: 7.573167ms, longest: 7.573167ms
+initialize last: 1.004042ms, longest: 1.004042ms
+initialized last: 162.842375ms, longest: 162.842375ms
+lsp.Server.codeAction last: 161.875µs, longest: 18.640875ms
+lsp.Server.codeLens last: 51.625µs, longest: 312.5µs
+lsp.Server.completion last: 557.356208ms, longest: 722.187ms
+lsp.Server.definition last: 86.583µs, longest: 86.583µs
+lsp.Server.didChange last: 153.834µs, longest: 39.284416ms
+lsp.Server.didChangeConfiguration last: 3.345792ms, longest: 3.345792ms
+lsp.Server.didChangeWatchedFiles last: 4.48525ms, longest: 4.48525ms
+lsp.Server.didClose last: 3.663834ms, longest: 27.689333ms
+lsp.Server.didOpen last: 2.310708ms, longest: 28.777917ms
+lsp.Server.didSave last: 92µs, longest: 328.070542ms
+lsp.Server.documentHighlight last: 215.208µs, longest: 215.208µs
+lsp.Server.documentLink last: 587.791µs, longest: 1.982167ms
+lsp.Server.documentSymbol last: 20.541µs, longest: 309.958µs
+lsp.Server.foldingRange last: 53.5µs, longest: 297.708µs
+lsp.Server.formatting last: 28.625µs, longest: 245.125µs
+lsp.Server.hover last: 67.875µs, longest: 200.708µs
+lsp.Server.initialize last: 183.459µs, longest: 183.459µs
+lsp.Server.initialized last: 162.491583ms, longest: 162.491583ms
+lsp.Server.inlayHint last: 98.667µs, longest: 159.748875ms
+lsp.Server.semanticTokensFull last: 1.45775ms, longest: 3.3715ms
+lsp.Server.signatureHelp last: 1.107459ms, longest: 1.107459ms
+mod.Diagnostics last: 37.506083ms, longest: 70.3155ms
+mod.Hover last: 8.5µs, longest: 90.333µs
+mod.UpgradeDiagnostics last: 62.292µs, longest: 386.333µs
+mod.VulnerabilityDiagnostics last: 55.125µs, longest: 119.625µs
+queued last: 14.667µs, longest: 695.574833ms
+snapshot.Analyze last: 18.554875ms, longest: 220.435042ms
+source.AllImportsFixes last: 118.208µs, longest: 18.492042ms
+source.DocumentSymbols last: 6.375µs, longest: 134.375µs
+source.Format last: 17.75µs, longest: 222.916µs
+source.Highlight last: 74.417µs, longest: 108.958µs
+source.Hover last: 36.916µs, longest: 84.875µs
+source.InlayHint last: 37.042µs, longest: 1.396667ms
+source.SignatureHelp last: 1.040917ms, longest: 1.040917ms
+source.computeTextEdits last: 21.084µs, longest: 61µs
+textDocument/codeAction last: 305.897958ms, longest: 468.4555ms
+textDocument/codeLens last: 219.458µs, longest: 695.731ms
+textDocument/completion last: 558.120125ms, longest: 723.188ms
+textDocument/definition last: 515.917µs, longest: 515.917µs
+textDocument/didChange last: 116.963458ms, longest: 501.35875ms
+textDocument/didClose last: 3.94675ms, longest: 312.633042ms
+textDocument/didOpen last: 2.435625ms, longest: 28.905ms
+textDocument/didSave last: 173.244917ms, longest: 328.205292ms
+textDocument/documentHighlight last: 654.458µs, longest: 677µs
+textDocument/documentLink last: 769.125µs, longest: 22.879916ms
+textDocument/documentSymbol last: 152.375625ms, longest: 567.772542ms
+textDocument/foldingRange last: 378.722333ms, longest: 557.77925ms
+textDocument/formatting last: 16.389958ms, longest: 21.794292ms
+textDocument/hover last: 228.708µs, longest: 37.028667ms
+textDocument/inlayHint last: 383.625µs, longest: 160.1105ms
+textDocument/publishDiagnostics last: 47.625µs, longest: 6.267ms
+textDocument/semanticTokens/full last: 28.201ms, longest: 484.705417ms
+textDocument/signatureHelp last: 1.345ms, longest: 1.345ms
+window/logMessage last: 292.417µs, longest: 3.027333ms
+window/showMessage last: 217.25µs, longest: 3.669917ms
+window/workDoneProgress/create last: 2.187292ms, longest: 2.187292ms
+work.Diagnostics last: 32.583µs, longest: 44.25µs
+workspace/configuration last: 1.3675ms, longest: 1.773083ms
+workspace/didChangeConfiguration last: 3.609084ms, longest: 3.609084ms
+workspace/didChangeWatchedFiles last: 4.62225ms, longest: 4.62225ms
+cache.forEachPackage
+Last
+10:58:05.750 end cache.forEachPackage (+7.167µs) packages=0
+Longest
+10:53:31.454 end cache.forEachPackage (+51.926625ms) packages=14
+10:53:31.404 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/pkg/fm/jsontype/jsontype.go"
+10:53:31.404 end cache.ParseGoSrc (+71.042µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/pkg/fm/jsontype/jsontype.go"
+10:53:31.411 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/pkg/publicid/publicid.go"
+10:53:31.411 end cache.ParseGoSrc (+62.209µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/pkg/publicid/publicid.go"
+10:53:31.411 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/hook/hook.go"
+10:53:31.411 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/intercept/intercept.go"
+10:53:31.411 end cache.ParseGoSrc (+156.958µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/hook/hook.go"
+10:53:31.411 end cache.ParseGoSrc (+188.625µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/intercept/intercept.go"
+10:53:31.415 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/cmd/entg/entg.go"
+10:53:31.415 end cache.ParseGoSrc (+35.625µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/cmd/entg/entg.go"
+10:53:31.415 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/ent/runtime"
+10:53:31.415 start cache.typeCheckBatch.checkPackageForImport package="entgo.io/ent/entc/gen"
+10:53:31.415 end cache.typeCheckBatch.checkPackage (+107.125µs) package="github.com/khanakia/entautoslow/ent/runtime"
+10:53:31.415 start cache.typeCheck package="github.com/khanakia/entautoslow/ent/runtime"
+10:53:31.415 end cache.typeCheck (+74.458µs) package="github.com/khanakia/entautoslow/ent/runtime"
+10:53:31.415 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/ent/migrate"
+10:53:31.415 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/ent/user"
+10:53:31.415 start cache.typeCheckBatch.importPackage package="github.com/lib/pq"
+10:53:31.416 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/ent/item"
+10:53:31.416 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/ent/predicate"
+10:53:31.416 end cache.typeCheckBatch.checkPackage (+138.167µs) package="github.com/khanakia/entautoslow/ent/predicate"
+10:53:31.416 start cache.typeCheck package="github.com/khanakia/entautoslow/ent/predicate"
+10:53:31.416 end cache.typeCheck (+118.125µs) package="github.com/khanakia/entautoslow/ent/predicate"
+10:53:31.416 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/predicate/predicate.go"
+10:53:31.416 end cache.ParseGoSrc (+32.375µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/predicate/predicate.go"
+10:53:31.416 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/pkg/fm/jsontype"
+10:53:31.416 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/ent/schema"
+10:53:31.417 end cache.typeCheckBatch.checkPackage (+376.875µs) package="github.com/khanakia/entautoslow/pkg/fm/jsontype"
+10:53:31.416 start cache.typeCheck package="github.com/khanakia/entautoslow/pkg/fm/jsontype"
+10:53:31.417 end cache.typeCheck (+354.417µs) package="github.com/khanakia/entautoslow/pkg/fm/jsontype"
+10:53:31.416 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/pkg/fm/jsontype/jsontype.go"
+10:53:31.416 end cache.ParseGoSrc (+68.292µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/pkg/fm/jsontype/jsontype.go"
+10:53:31.417 start cache.typeCheckBatch.importPackage package="entgo.io/ent/entc"
+10:53:31.417 end cache.typeCheckBatch.checkPackage (+560.708µs) package="github.com/khanakia/entautoslow/ent/schema"
+10:53:31.416 start cache.typeCheck package="github.com/khanakia/entautoslow/ent/schema"
+10:53:31.417 end cache.typeCheck (+518.584µs) package="github.com/khanakia/entautoslow/ent/schema"
+10:53:31.416 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/schema/user.go"
+10:53:31.416 end cache.ParseGoSrc (+53.125µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/schema/user.go"
+10:53:31.416 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/schema/item.go"
+10:53:31.416 end cache.ParseGoSrc (+65.958µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/schema/item.go"
+10:53:31.417 start cache.typeCheckBatch.importPackage package="github.com/pkg/errors"
+10:53:31.417 end cache.typeCheckBatch.importPackage (+117.25µs) package="github.com/pkg/errors"
+10:53:31.417 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/ent"
+10:53:31.418 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/ent/hook"
+10:53:31.418 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/ent/intercept"
+10:53:31.418 end cache.typeCheckBatch.checkPackage (+2.690417ms) package="github.com/khanakia/entautoslow/ent/user"
+10:53:31.415 start cache.typeCheck package="github.com/khanakia/entautoslow/ent/user"
+10:53:31.418 end cache.typeCheck (+2.661791ms) package="github.com/khanakia/entautoslow/ent/user"
+10:53:31.415 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user/where.go"
+10:53:31.416 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user/user.go"
+10:53:31.416 end cache.ParseGoSrc (+60.959µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user/user.go"
+10:53:31.417 end cache.ParseGoSrc (+1.880292ms) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user/where.go"
+10:53:31.419 end cache.typeCheckBatch.checkPackage (+835.292µs) package="github.com/khanakia/entautoslow/ent/hook"
+10:53:31.418 start cache.typeCheck package="github.com/khanakia/entautoslow/ent/hook"
+10:53:31.419 end cache.typeCheck (+810.5µs) package="github.com/khanakia/entautoslow/ent/hook"
+10:53:31.418 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/hook/hook.go"
+10:53:31.418 end cache.ParseGoSrc (+194.125µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/hook/hook.go"
+10:53:31.419 start cache.typeCheckBatch.importPackage package="github.com/matoous/go-nanoid/v2"
+10:53:31.419 end cache.typeCheckBatch.importPackage (+81.875µs) package="github.com/matoous/go-nanoid/v2"
+10:53:31.419 end cache.typeCheckBatch.checkPackage (+841.167µs) package="github.com/khanakia/entautoslow/ent/intercept"
+10:53:31.418 start cache.typeCheck package="github.com/khanakia/entautoslow/ent/intercept"
+10:53:31.419 end cache.typeCheck (+823.25µs) package="github.com/khanakia/entautoslow/ent/intercept"
+10:53:31.418 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/intercept/intercept.go"
+10:53:31.418 end cache.ParseGoSrc (+173.584µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/intercept/intercept.go"
+10:53:31.419 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/pkg/publicid"
+10:53:31.419 end cache.typeCheckBatch.checkPackage (+240.125µs) package="github.com/khanakia/entautoslow/pkg/publicid"
+10:53:31.419 start cache.typeCheck package="github.com/khanakia/entautoslow/pkg/publicid"
+10:53:31.419 end cache.typeCheck (+222.833µs) package="github.com/khanakia/entautoslow/pkg/publicid"
+10:53:31.419 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/pkg/publicid/publicid.go"
+10:53:31.419 end cache.ParseGoSrc (+48.083µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/pkg/publicid/publicid.go"
+10:53:31.422 end cache.typeCheckBatch.checkPackage (+6.697583ms) package="github.com/khanakia/entautoslow/ent/migrate"
+10:53:31.415 start cache.typeCheck package="github.com/khanakia/entautoslow/ent/migrate"
+10:53:31.422 end cache.typeCheck (+6.666792ms) package="github.com/khanakia/entautoslow/ent/migrate"
+10:53:31.415 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/migrate/schema.go"
+10:53:31.416 end cache.ParseGoSrc (+221.291µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/migrate/schema.go"
+10:53:31.429 end cache.typeCheckBatch.importPackage (+13.315375ms) package="github.com/lib/pq"
+10:53:31.416 start cache.typeCheckBatch.importPackage package="github.com/lib/pq/oid"
+10:53:31.416 end cache.typeCheckBatch.importPackage (+213.125µs) package="github.com/lib/pq/oid"
+10:53:31.416 start cache.typeCheckBatch.importPackage package="net"
+10:53:31.425 end cache.typeCheckBatch.importPackage (+8.898709ms) package="net"
+10:53:31.418 start cache.typeCheckBatch.importPackage package="internal/singleflight"
+10:53:31.418 end cache.typeCheckBatch.importPackage (+66.958µs) package="internal/singleflight"
+10:53:31.418 start cache.typeCheckBatch.importPackage package="net/netip"
+10:53:31.419 end cache.typeCheckBatch.importPackage (+360.625µs) package="net/netip"
+10:53:31.419 start cache.typeCheckBatch.importPackage package="internal/intern"
+10:53:31.419 end cache.typeCheckBatch.importPackage (+54.125µs) package="internal/intern"
+10:53:31.419 start cache.typeCheckBatch.importPackage package="vendor/golang.org/x/net/dns/dnsmessage"
+10:53:31.419 end cache.typeCheckBatch.importPackage (+443µs) package="vendor/golang.org/x/net/dns/dnsmessage"
+10:53:31.433 end cache.typeCheckBatch.checkPackage (+17.352ms) package="github.com/khanakia/entautoslow/ent/item"
+10:53:31.416 start cache.typeCheck package="github.com/khanakia/entautoslow/ent/item"
+10:53:31.433 end cache.typeCheck (+17.326375ms) package="github.com/khanakia/entautoslow/ent/item"
+10:53:31.416 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item/where.go"
+10:53:31.418 end cache.ParseGoSrc (+2.238458ms) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item/where.go"
+10:53:31.421 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item/item.go"
+10:53:31.421 end cache.ParseGoSrc (+359.584µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item/item.go"
+10:53:31.433 end cache.typeCheckBatch.checkPackageForImport (+18.245083ms) package="entgo.io/ent/entc/gen"
+10:53:31.415 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/predicate.go"
+10:53:31.415 end cache.ParseGoSrc (+77.541µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/predicate.go"
+10:53:31.415 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/storage.go"
+10:53:31.415 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/feature.go"
+10:53:31.415 end cache.ParseGoSrc (+174.291µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/storage.go"
+10:53:31.415 end cache.ParseGoSrc (+195.083µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/feature.go"
+10:53:31.415 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/template.go"
+10:53:31.415 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/type.go"
+10:53:31.416 end cache.ParseGoSrc (+396.583µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/template.go"
+10:53:31.416 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/func.go"
+10:53:31.416 end cache.ParseGoSrc (+387.292µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/func.go"
+10:53:31.416 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/graph.go"
+10:53:31.417 end cache.ParseGoSrc (+1.649334ms) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/type.go"
+10:53:31.417 end cache.ParseGoSrc (+944.541µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/vendor/entgo.io/ent/entc/gen/graph.go"
+10:53:31.417 start cache.typeCheckBatch.importPackage package="go/token"
+10:53:31.418 end cache.typeCheckBatch.importPackage (+288.625µs) package="go/token"
+10:53:31.418 start cache.typeCheckBatch.importPackage package="go/parser"
+10:53:31.419 end cache.typeCheckBatch.importPackage (+1.440709ms) package="go/parser"
+10:53:31.418 start cache.typeCheckBatch.importPackage package="go/ast"
+10:53:31.419 end cache.typeCheckBatch.importPackage (+1.031333ms) package="go/ast"
+10:53:31.419 start cache.typeCheckBatch.importPackage package="entgo.io/ent/entc/load"
+10:53:31.432 end cache.typeCheckBatch.importPackage (+12.208959ms) package="entgo.io/ent/entc/load"
+10:53:31.420 start cache.typeCheckBatch.importPackage package="golang.org/x/tools/go/packages"
+10:53:31.432 end cache.typeCheckBatch.importPackage (+11.916666ms) package="golang.org/x/tools/go/packages"
+10:53:31.426 start cache.typeCheckBatch.importPackage package="go/types"
+10:53:31.431 end cache.typeCheckBatch.importPackage (+5.234ms) package="go/types"
+10:53:31.428 start cache.typeCheckBatch.importPackage package="go/constant"
+10:53:31.429 end cache.typeCheckBatch.importPackage (+1.067458ms) package="go/constant"
+10:53:31.429 start cache.typeCheckBatch.importPackage package="go/internal/typeparams"
+10:53:31.429 end cache.typeCheckBatch.importPackage (+48.833µs) package="go/internal/typeparams"
+10:53:31.429 start cache.typeCheckBatch.importPackage package="internal/types/errors"
+10:53:31.429 end cache.typeCheckBatch.importPackage (+147.5µs) package="internal/types/errors"
+10:53:31.431 start cache.typeCheckBatch.importPackage package="golang.org/x/tools/internal/gocommand"
+10:53:31.431 end cache.typeCheckBatch.importPackage (+104.125µs) package="golang.org/x/tools/internal/gocommand"
+10:53:31.431 start cache.typeCheckBatch.importPackage package="golang.org/x/tools/internal/packagesinternal"
+10:53:31.431 end cache.typeCheckBatch.importPackage (+58.25µs) package="golang.org/x/tools/internal/packagesinternal"
+10:53:31.432 start cache.typeCheckBatch.importPackage package="golang.org/x/tools/imports"
+10:53:31.432 end cache.typeCheckBatch.importPackage (+74.208µs) package="golang.org/x/tools/imports"
+10:53:31.432 start cache.typeCheckBatch.importPackage package="entgo.io/ent/dialect/gremlin/graph/dsl"
+10:53:31.432 end cache.typeCheckBatch.importPackage (+164.209µs) package="entgo.io/ent/dialect/gremlin/graph/dsl"
+10:53:31.433 end cache.typeCheckBatch.importPackage (+16.853125ms) package="entgo.io/ent/entc"
+10:53:31.433 start cache.typeCheckBatch.checkPackage package="github.com/khanakia/entautoslow/cmd/entg"
+10:53:31.434 end cache.typeCheckBatch.checkPackage (+158.5µs) package="github.com/khanakia/entautoslow/cmd/entg"
+10:53:31.433 start cache.typeCheck package="github.com/khanakia/entautoslow/cmd/entg"
+10:53:31.434 end cache.typeCheck (+137.541µs) package="github.com/khanakia/entautoslow/cmd/entg"
+10:53:31.433 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/cmd/entg/entg.go"
+10:53:31.433 end cache.ParseGoSrc (+27.292µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/cmd/entg/entg.go"
+10:53:31.454 end cache.typeCheckBatch.checkPackage (+36.878417ms) package="github.com/khanakia/entautoslow/ent"
+10:53:31.417 start cache.typeCheck package="github.com/khanakia/entautoslow/ent"
+10:53:31.454 end cache.typeCheck (+36.855541ms) package="github.com/khanakia/entautoslow/ent"
+10:53:31.417 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/tx.go"
+10:53:31.417 end cache.ParseGoSrc (+205.833µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/tx.go"
+10:53:31.417 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user.go"
+10:53:31.417 end cache.ParseGoSrc (+112.083µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user.go"
+10:53:31.417 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user_create.go"
+10:53:31.418 end cache.ParseGoSrc (+220.709µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user_create.go"
+10:53:31.418 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user_delete.go"
+10:53:31.418 end cache.ParseGoSrc (+79.5µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user_delete.go"
+10:53:31.418 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user_query.go"
+10:53:31.418 end cache.ParseGoSrc (+442.209µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user_query.go"
+10:53:31.418 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user_update.go"
+10:53:31.418 end cache.ParseGoSrc (+229.833µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/user_update.go"
+10:53:31.419 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item_delete.go"
+10:53:31.419 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/ent.go"
+10:53:31.420 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/client.go"
+10:53:31.420 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item_query.go"
+10:53:31.421 end cache.ParseGoSrc (+1.633709ms) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/ent.go"
+10:53:31.421 end cache.ParseGoSrc (+1.967917ms) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item_delete.go"
+10:53:31.422 end cache.ParseGoSrc (+2.018208ms) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/client.go"
+10:53:31.422 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item.go"
+10:53:31.422 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item_create.go"
+10:53:31.422 end cache.ParseGoSrc (+2.1385ms) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item_query.go"
+10:53:31.422 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/mutation.go"
+10:53:31.420 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item_update.go"
+10:53:31.423 end cache.ParseGoSrc (+828.458µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item.go"
+10:53:31.423 start cache.ParseGoSrc file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/runtime.go"
+10:53:31.423 end cache.ParseGoSrc (+29.792µs) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/runtime.go"
+10:53:31.423 end cache.ParseGoSrc (+1.253792ms) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item_create.go"
+10:53:31.428 end cache.ParseGoSrc (+8.239708ms) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/item_update.go"
+10:53:31.429 end cache.ParseGoSrc (+6.841291ms) file="/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/ent/mutation.go"
+Recent spans (oldest first)
+A finite number of recent span start/end times are shown below. The nesting represents the children of a parent span (and the log events within a span). A span may appear twice: chronologically at toplevel, and nested within its parent.
+
+10:58:05.022 start textDocument/documentSymbol method="textDocument/documentSymbol" direction="in" id="#548"
+10:58:05.022 start queued
+10:58:05.173 end completion.Completion (+557.228041ms)
+10:58:04.616 start cache.forEachPackage packages=0
+10:58:04.616 end cache.forEachPackage (+3.042µs) packages=0
+10:58:05.173 end lsp.Server.completion (+557.356208ms) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:04.616 start completion.Completion
+10:58:05.173 end completion.Completion (+557.228041ms)
+10:58:04.616 start cache.forEachPackage packages=0
+10:58:04.616 end cache.forEachPackage (+3.042µs) packages=0
+10:58:05.173 end queued (+377.975042ms)
+10:58:05.173 start lsp.Server.foldingRange URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.173 end lsp.Server.foldingRange (+53.5µs) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.173 end queued (+305.229541ms)
+10:58:05.173 start lsp.Server.codeAction
+10:58:05.173 start source.AllImportsFixes
+10:58:05.173 start cache.importsState.runProcessEnvFunc
+10:58:05.173 start imports.FixImports
+10:58:05.173 end imports.FixImports (+71.542µs)
+10:58:05.174 end cache.importsState.runProcessEnvFunc (+112.542µs)
+10:58:05.173 start imports.FixImports
+10:58:05.173 end imports.FixImports (+71.542µs)
+10:58:05.174 end source.AllImportsFixes (+118.208µs)
+10:58:05.173 start cache.importsState.runProcessEnvFunc
+10:58:05.174 end cache.importsState.runProcessEnvFunc (+112.542µs)
+10:58:05.173 start imports.FixImports
+10:58:05.173 end imports.FixImports (+71.542µs)
+10:58:05.174 start cache.forEachPackage packages=0
+10:58:05.174 end cache.forEachPackage (+3.333µs) packages=0
+10:58:05.174 start window/logMessage method="window/logMessage" direction="out"
+10:58:05.174 end lsp.Server.codeAction (+161.875µs)
+10:58:05.173 start source.AllImportsFixes
+10:58:05.174 end source.AllImportsFixes (+118.208µs)
+10:58:05.173 start cache.importsState.runProcessEnvFunc
+10:58:05.174 end cache.importsState.runProcessEnvFunc (+112.542µs)
+10:58:05.173 start imports.FixImports
+10:58:05.173 end imports.FixImports (+71.542µs)
+10:58:05.174 start cache.forEachPackage packages=0
+10:58:05.174 end cache.forEachPackage (+3.333µs) packages=0
+10:58:05.174 end queued (+303.205209ms)
+10:58:05.174 start lsp.Server.codeLens URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.174 end lsp.Server.codeLens (+15.792µs) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.174 end queued (+151.847041ms)
+10:58:05.174 start lsp.Server.documentSymbol URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.174 start source.DocumentSymbols
+10:58:05.174 end source.DocumentSymbols (+6.375µs)
+10:58:05.174 end lsp.Server.documentSymbol (+20.541µs) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.174 start source.DocumentSymbols
+10:58:05.174 end source.DocumentSymbols (+6.375µs)
+10:58:05.174 end textDocument/completion (+558.120125ms) method="textDocument/completion" direction="in" id="#544"
+10:58:05.174 event (+558.118916ms) label= status.code="OK"
+10:58:04.616 start queued
+10:58:04.616 end queued (+7.708µs)
+10:58:04.616 start lsp.Server.completion URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.173 end lsp.Server.completion (+557.356208ms) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:04.616 start completion.Completion
+10:58:05.173 end completion.Completion (+557.228041ms)
+10:58:04.616 start cache.forEachPackage packages=0
+10:58:04.616 end cache.forEachPackage (+3.042µs) packages=0
+10:58:05.174 end textDocument/foldingRange (+378.722333ms) method="textDocument/foldingRange" direction="in" id="#545"
+10:58:05.174 event (+378.721125ms) label= status.code="OK"
+10:58:04.795 start queued
+10:58:05.173 end queued (+377.975042ms)
+10:58:05.173 start lsp.Server.foldingRange URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.173 end lsp.Server.foldingRange (+53.5µs) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.174 end textDocument/codeAction (+305.897958ms) method="textDocument/codeAction" direction="in" id="#546"
+10:58:05.174 event (+305.897083ms) label= status.code="OK"
+10:58:04.868 start queued
+10:58:05.173 end queued (+305.229541ms)
+10:58:05.173 start lsp.Server.codeAction
+10:58:05.174 end lsp.Server.codeAction (+161.875µs)
+10:58:05.173 start source.AllImportsFixes
+10:58:05.174 end source.AllImportsFixes (+118.208µs)
+10:58:05.173 start cache.importsState.runProcessEnvFunc
+10:58:05.174 end cache.importsState.runProcessEnvFunc (+112.542µs)
+10:58:05.173 start imports.FixImports
+10:58:05.173 end imports.FixImports (+71.542µs)
+10:58:05.174 start cache.forEachPackage packages=0
+10:58:05.174 end cache.forEachPackage (+3.333µs) packages=0
+10:58:05.174 end window/logMessage (+494.375µs) method="window/logMessage" direction="out"
+10:58:05.174 event (+493.333µs) label= status.code="OK"
+10:58:05.174 end textDocument/codeLens (+303.715167ms) method="textDocument/codeLens" direction="in" id="#547"
+10:58:05.174 event (+303.714458ms) label= status.code="OK"
+10:58:04.870 start queued
+10:58:05.174 end queued (+303.205209ms)
+10:58:05.174 start lsp.Server.codeLens URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.174 end lsp.Server.codeLens (+15.792µs) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.174 end textDocument/documentSymbol (+152.375625ms) method="textDocument/documentSymbol" direction="in" id="#548"
+10:58:05.174 event (+152.374834ms) label= status.code="OK"
+10:58:05.022 start queued
+10:58:05.174 end queued (+151.847041ms)
+10:58:05.174 start lsp.Server.documentSymbol URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.174 end lsp.Server.documentSymbol (+20.541µs) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.174 start source.DocumentSymbols
+10:58:05.174 end source.DocumentSymbols (+6.375µs)
+10:58:05.614 start Server.diagnose snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start work.Diagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end work.Diagnostics (+32.583µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start mod.Diagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end mod.Diagnostics (+128.708µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start mod.UpgradeDiagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end mod.UpgradeDiagnostics (+62.292µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start mod.VulnerabilityDiagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end mod.VulnerabilityDiagnostics (+55.125µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.616 start Server.diagnosePkgs snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.616 start snapshot.Analyze package="github.com/khanakia/entautoslow"
+10:58:05.619 start mod.Diagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.619 start cache.snapshot.PackageDiagnostics
+10:58:05.619 start cache.forEachPackage packages=14
+10:58:05.619 start cache.snapshot.ModTidy
+10:58:05.620 start cache.ModTidy URI=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/go.mod
+10:58:05.621 end cache.forEachPackage (+1.859833ms) packages=14
+10:58:05.621 end cache.snapshot.PackageDiagnostics (+1.934917ms)
+10:58:05.619 start cache.forEachPackage packages=14
+10:58:05.621 end cache.forEachPackage (+1.859833ms) packages=14
+10:58:05.621 start gocommand.Runner.Run verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.621 start gocommand.Runner.RunRaw verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.635 end snapshot.Analyze (+18.554875ms) package="github.com/khanakia/entautoslow"
+10:58:05.635 end Server.diagnosePkgs (+18.89575ms) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.616 start snapshot.Analyze package="github.com/khanakia/entautoslow"
+10:58:05.619 start cache.snapshot.PackageDiagnostics
+10:58:05.621 end cache.snapshot.PackageDiagnostics (+1.934917ms)
+10:58:05.619 start cache.forEachPackage packages=14
+10:58:05.621 end cache.forEachPackage (+1.859833ms) packages=14
+10:58:05.635 end snapshot.Analyze (+18.554875ms) package="github.com/khanakia/entautoslow"
+10:58:05.655 end gocommand.Runner.RunRaw (+34.671708ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.Run (+34.710208ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.621 start gocommand.Runner.RunRaw verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.RunRaw (+34.671708ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.656 end cache.ModTidy (+36.09125ms) URI=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/go.mod
+10:58:05.621 start gocommand.Runner.Run verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.Run (+34.710208ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.621 start gocommand.Runner.RunRaw verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.RunRaw (+34.671708ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.656 end cache.snapshot.ModTidy (+36.8445ms)
+10:58:05.620 start cache.ModTidy URI=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/go.mod
+10:58:05.656 end cache.ModTidy (+36.09125ms) URI=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/go.mod
+10:58:05.621 start gocommand.Runner.Run verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.Run (+34.710208ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.621 start gocommand.Runner.RunRaw verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.RunRaw (+34.671708ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.656 end mod.Diagnostics (+37.506083ms) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.619 start cache.snapshot.ModTidy
+10:58:05.656 end cache.snapshot.ModTidy (+36.8445ms)
+10:58:05.620 start cache.ModTidy URI=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/go.mod
+10:58:05.656 end cache.ModTidy (+36.09125ms) URI=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/go.mod
+10:58:05.621 start gocommand.Runner.Run verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.Run (+34.710208ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.621 start gocommand.Runner.RunRaw verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.RunRaw (+34.671708ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.656 end Server.diagnose (+42.350958ms) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start work.Diagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end work.Diagnostics (+32.583µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start mod.Diagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end mod.Diagnostics (+128.708µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start mod.UpgradeDiagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end mod.UpgradeDiagnostics (+62.292µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start mod.VulnerabilityDiagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end mod.VulnerabilityDiagnostics (+55.125µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.616 start Server.diagnosePkgs snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.619 start mod.Diagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.635 end Server.diagnosePkgs (+18.89575ms) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.616 start snapshot.Analyze package="github.com/khanakia/entautoslow"
+10:58:05.619 start cache.snapshot.PackageDiagnostics
+10:58:05.621 end cache.snapshot.PackageDiagnostics (+1.934917ms)
+10:58:05.619 start cache.forEachPackage packages=14
+10:58:05.621 end cache.forEachPackage (+1.859833ms) packages=14
+10:58:05.635 end snapshot.Analyze (+18.554875ms) package="github.com/khanakia/entautoslow"
+10:58:05.656 end mod.Diagnostics (+37.506083ms) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.619 start cache.snapshot.ModTidy
+10:58:05.656 end cache.snapshot.ModTidy (+36.8445ms)
+10:58:05.620 start cache.ModTidy URI=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/go.mod
+10:58:05.656 end cache.ModTidy (+36.09125ms) URI=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/go.mod
+10:58:05.621 start gocommand.Runner.Run verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.Run (+34.710208ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.621 start gocommand.Runner.RunRaw verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.RunRaw (+34.671708ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.656 start Server.publishDiagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.656 end Server.publishDiagnostics (+65.166µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.656 end Server.diagnoseSnapshot (+1.0445385s) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:04.612 start Server.diagnoseChangedFiles snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:04.613 end Server.diagnoseChangedFiles (+1.252458ms) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:04.612 start Server.diagnosePkgs snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:04.613 end Server.diagnosePkgs (+1.243625ms) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:04.612 start snapshot.Analyze package=""
+10:58:04.612 end snapshot.Analyze (+35.875µs) package=""
+10:58:04.612 start cache.snapshot.PackageDiagnostics
+10:58:04.613 end cache.snapshot.PackageDiagnostics (+1.189459ms)
+10:58:04.612 start cache.forEachPackage packages=1
+10:58:04.613 end cache.forEachPackage (+1.16725ms) packages=1
+10:58:04.613 start Server.publishDiagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:04.613 end Server.publishDiagnostics (+67.459µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:04.613 start textDocument/publishDiagnostics method="textDocument/publishDiagnostics" direction="out"
+10:58:04.613 end textDocument/publishDiagnostics (+47.625µs) method="textDocument/publishDiagnostics" direction="out"
+10:58:04.613 event (+1.332708ms) label= status.code="OK"
+10:58:05.614 start Server.diagnose snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.656 end Server.diagnose (+42.350958ms) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start work.Diagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end work.Diagnostics (+32.583µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start mod.Diagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end mod.Diagnostics (+128.708µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start mod.UpgradeDiagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end mod.UpgradeDiagnostics (+62.292µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 start mod.VulnerabilityDiagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.614 end mod.VulnerabilityDiagnostics (+55.125µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.616 start Server.diagnosePkgs snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.619 start mod.Diagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.635 end Server.diagnosePkgs (+18.89575ms) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.616 start snapshot.Analyze package="github.com/khanakia/entautoslow"
+10:58:05.619 start cache.snapshot.PackageDiagnostics
+10:58:05.621 end cache.snapshot.PackageDiagnostics (+1.934917ms)
+10:58:05.619 start cache.forEachPackage packages=14
+10:58:05.621 end cache.forEachPackage (+1.859833ms) packages=14
+10:58:05.635 end snapshot.Analyze (+18.554875ms) package="github.com/khanakia/entautoslow"
+10:58:05.656 end mod.Diagnostics (+37.506083ms) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.619 start cache.snapshot.ModTidy
+10:58:05.656 end cache.snapshot.ModTidy (+36.8445ms)
+10:58:05.620 start cache.ModTidy URI=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/go.mod
+10:58:05.656 end cache.ModTidy (+36.09125ms) URI=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/go.mod
+10:58:05.621 start gocommand.Runner.Run verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.Run (+34.710208ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.621 start gocommand.Runner.RunRaw verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.655 end gocommand.Runner.RunRaw (+34.671708ms) verb="mod" directory=/Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.656 start Server.publishDiagnostics snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.656 end Server.publishDiagnostics (+65.166µs) snapshot=233 directory=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow
+10:58:05.750 start textDocument/inlayHint method="textDocument/inlayHint" direction="in" id="#549"
+10:58:05.750 start queued
+10:58:05.750 end queued (+26.5µs)
+10:58:05.750 start lsp.Server.inlayHint URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.750 start source.InlayHint
+10:58:05.750 start cache.forEachPackage packages=0
+10:58:05.750 end cache.forEachPackage (+7.167µs) packages=0
+10:58:05.750 end source.InlayHint (+37.042µs)
+10:58:05.750 start cache.forEachPackage packages=0
+10:58:05.750 end cache.forEachPackage (+7.167µs) packages=0
+10:58:05.750 end lsp.Server.inlayHint (+98.667µs) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.750 start source.InlayHint
+10:58:05.750 end source.InlayHint (+37.042µs)
+10:58:05.750 start cache.forEachPackage packages=0
+10:58:05.750 end cache.forEachPackage (+7.167µs) packages=0
+10:58:05.750 end textDocument/inlayHint (+383.625µs) method="textDocument/inlayHint" direction="in" id="#549"
+10:58:05.750 event (+381.667µs) label= status.code="OK"
+10:58:05.750 start queued
+10:58:05.750 end queued (+26.5µs)
+10:58:05.750 start lsp.Server.inlayHint URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.750 end lsp.Server.inlayHint (+98.667µs) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:05.750 start source.InlayHint
+10:58:05.750 end source.InlayHint (+37.042µs)
+10:58:05.750 start cache.forEachPackage packages=0
+10:58:05.750 end cache.forEachPackage (+7.167µs) packages=0
+10:58:05.995 start textDocument/documentLink method="textDocument/documentLink" direction="in" id="#550"
+10:58:05.995 start queued
+10:58:05.995 end queued (+14.167µs)
+10:58:05.995 start lsp.Server.documentLink
+10:58:05.996 end lsp.Server.documentLink (+587.791µs)
+10:58:05.996 end textDocument/documentLink (+769.125µs) method="textDocument/documentLink" direction="in" id="#550"
+10:58:05.996 event (+767.958µs) label= status.code="OK"
+10:58:05.995 start queued
+10:58:05.995 end queued (+14.167µs)
+10:58:05.995 start lsp.Server.documentLink
+10:58:05.996 end lsp.Server.documentLink (+587.791µs)
+10:58:17.536 start textDocument/codeLens method="textDocument/codeLens" direction="in" id="#551"
+10:58:17.536 start queued
+10:58:17.536 end queued (+14.667µs)
+10:58:17.536 start lsp.Server.codeLens URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:17.536 end lsp.Server.codeLens (+51.625µs) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:17.536 end textDocument/codeLens (+219.458µs) method="textDocument/codeLens" direction="in" id="#551"
+10:58:17.536 event (+218.333µs) label= status.code="OK"
+10:58:17.536 start queued
+10:58:17.536 end queued (+14.667µs)
+10:58:17.536 start lsp.Server.codeLens URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:17.536 end lsp.Server.codeLens (+51.625µs) URI=file:///Users/khanakia/D1/www/go1/entgo_autocomplete_vscode_slow/main.go
+10:58:31.808 start cache.importsState.refreshProcessEnv
+10:58:31.809 start window/logMessage method="window/logMessage" direction="out"
+10:58:31.809 start window/logMessage method="window/logMessage" direction="out"
+10:58:31.809 end window/logMessage (+328.458µs) method="window/logMessage" direction="out"
+10:58:31.809 event (+323.958µs) label= status.code="OK"
+10:58:31.809 end window/logMessage (+252.875µs) method="window/logMessage" direction="out"
+10:58:31.809 event (+242.375µs) label= status.code="OK"
+10:58:31.823 start window/logMessage method="window/logMessage" direction="out"
+10:58:31.823 start window/logMessage method="window/logMessage" direction="out"
+10:58:31.823 end window/logMessage (+178.917µs) method="window/logMessage" direction="out"
+10:58:31.823 event (+176.625µs) label= status.code="OK"
+10:58:31.823 end window/logMessage (+235.083µs) method="window/logMessage" direction="out"
+10:58:31.823 event (+233.5µs) label= status.code="OK"
+10:58:31.829 end cache.importsState.refreshProcessEnv (+21.117375ms)
+10:58:31.829 event (+21.108584ms) message="background refresh finished after 20.891041ms"
+10:58:31.829 start window/logMessage method="window/logMessage" direction="out"
+10:58:31.829 start window/logMessage method="window/logMessage" direction="out"
+10:58:31.829 end window/logMessage (+255.708µs) method="window/logMessage" direction="out"
+10:58:31.829 event (+253.25µs) label= status.code="OK"
+10:58:31.829 end window/logMessage (+292.417µs) method="window/logMessage" direction="out"
+10:58:31.829 event (+289.625µs) label= status.code="OK"
