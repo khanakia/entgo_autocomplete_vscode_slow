@@ -20,5 +20,5 @@ func main() {
 		log.Fatalf("failed creating schema resource dds: %v", err)
 	}
 
-	client.Item.Create().Mutation().Set
+	// client.Item.Create().Mutation().Set
 }
